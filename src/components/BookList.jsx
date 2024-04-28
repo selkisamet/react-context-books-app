@@ -6,12 +6,13 @@ import "./BookList.css";
 const BookList = () => {
     const booksContext = useContext(BookContext);
 
+
     return (
-        <section className="page-section bg-light" id="portfolio">
+        <section className="page-section" id="portfolio">
             <div className="container">
                 <div className="text-center">
                     <h2 className="section-heading text-uppercase">BOOK LIST</h2>
-                    <h3 className="section-subheading text-muted">Book List Archive</h3>
+                    <h3 className="section-subheading">Book List Archive</h3>
                 </div>
                 <div className="row">
                     {

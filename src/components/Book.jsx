@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Book.css";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Book = ({ book }) => {
+    const themeContext = useContext(ThemeContext);
+
+    console.log(themeContext);
+
     return (
         <div className="col-lg-4 col-sm-6 mb-4">
             <div className="portfolio-item">
                 <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                    <div className="portfolio-hover">
+                    <div className="portfolio-hover" style={{ backgroundColor: themeContext.hover }}>
                         <div className="portfolio-hover-content">
                             <i className="fas fa-plus fa-3x"></i>
                         </div>
