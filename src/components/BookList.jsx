@@ -1,13 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Book from "./Book";
+import BookContext from "../context/BookContext";
 import "./BookList.css";
 
-const BookList = ({ books }) => {
-    console.log(books);
-
-    const bookList = books.map((book, index) => {
-        return <Book book={book} key={index} />
-    })
+const BookList = () => {
+    const booksContext = useContext(BookContext);
 
     return (
         <section className="page-section bg-light" id="portfolio">
@@ -17,7 +14,11 @@ const BookList = ({ books }) => {
                     <h3 className="section-subheading text-muted">Book List Archive</h3>
                 </div>
                 <div className="row">
-                    {bookList}
+                    {
+                        booksContext.map((book, index) => {
+                            return <Book book={book} key={index} />
+                        })
+                    }
                 </div>
             </div>
         </section>

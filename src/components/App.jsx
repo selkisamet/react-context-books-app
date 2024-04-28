@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from "react";
-import bookListData from "../data.json";
+import React from "react";
 import BookList from "./BookList";
 
 const App = () => {
-    const [books, setBooks] = useState(bookListData["books"]);
-
-    useEffect(() => {
-        setBooks(bookListData["books"]);
-    }, []);
-
     return (
         <div>
-            <BookList books={books} />
+            <BookList />
         </div>
     )
 }
