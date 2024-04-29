@@ -5,8 +5,6 @@ import { ThemeContext } from "../context/ThemeContext";
 const Book = ({ book }) => {
     const themeContext = useContext(ThemeContext);
 
-    console.log(themeContext);
-
     return (
         <div className="col-lg-4 col-sm-6 mb-4">
             <div className="portfolio-item">

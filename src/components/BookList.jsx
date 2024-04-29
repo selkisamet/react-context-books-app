@@ -6,7 +6,6 @@ import "./BookList.css";
 const BookList = () => {
     const booksContext = useContext(BookContext);
 
-
     return (
         <section className="page-section" id="portfolio">
             <div className="container">

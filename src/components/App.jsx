@@ -8,8 +8,12 @@ const App = () => {
 
     return (
         <div style={{ backgroundColor: themeContext.bg, color: themeContext.text }}>
+            <div className="d-flex justify-content-center">
+                <button type="button" className="btn btn-sm btn-info my-3"
+                    onClick={themeContext.changeTheme}>Change Theme</button>
+            </div>
             <BookList />
-        </div>
+        </div >
     )
 }
 

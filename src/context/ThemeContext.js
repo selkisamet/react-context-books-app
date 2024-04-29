@@ -10,10 +10,15 @@ const ThemeContextProvider = ({ children }) => {
         setIsDarkTheme(true);
     }, []);
 
+    const changeTheme = () => {
+        setIsDarkTheme(prevIsDarkTheme => !prevIsDarkTheme);
+    }
+
     const value = {
         bg: isDarkTheme ? "#222529" : "#f8f9fa",
         text: isDarkTheme ? "#d65f5f" : "#222529",
-        hover: isDarkTheme ? "rgba(231, 76, 60, 0.7)" : "rgba(254, 209, 54, 0.7)"
+        hover: isDarkTheme ? "rgba(231, 76, 60, 0.7)" : "rgba(254, 209, 54, 0.7)",
+        changeTheme
     }
 
     return (
