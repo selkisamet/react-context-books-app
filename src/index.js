@@ -4,7 +4,7 @@ import App from "./components/App";
 import BookContextProvider from "./context/BookContext";
 import ThemeContextProvider from "./context/ThemeContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeContextProvider>
